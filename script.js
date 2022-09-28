@@ -79,11 +79,11 @@ function results(score) {
   if (score[0] > score[1]) console.log("You have won the match! GJ!");
   if (score[0] < score[1])
     console.log("Unfortunately computer was better this time :(");
-  if ((score[0] = score[1])) console.log("It's a draw");
+  if (score[0] === score[1]) console.log("It's a draw");
 }
 
 //LOOP - GAME HAS 5 ROUNDS
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; ++i) {
   console.log(i);
   playRound();
   alert("Next round!");
