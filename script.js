@@ -23,21 +23,29 @@ function playRound() {
   let playerChoice = getPlayerChoice();
 
   if (playerChoice === "rock") {
-    if (computerChoice === "scissors") console.log("You win, congratz");
-    if (computerChoice === "paper") console.log("You lost, try next time!");
-    if (computerChoice === "rock") console.log("It's a draw");
+    if (computerChoice === "scissors")
+      console.log("You win! Rock beats scissors");
+    if (computerChoice === "paper")
+      console.log("You lost.... Rock loses with paper! Try next time");
+    if (computerChoice === "rock")
+      console.log("It's a draw! You both picked rock!");
   }
 
   if (playerChoice === "paper") {
-    if (computerChoice === "rock") console.log("You win, congratz");
-    if (computerChoice === "scissors") console.log("You lost, try next time!");
-    if (computerChoice === "paper") console.log("It's a draw");
+    if (computerChoice === "rock") console.log("You win! Paper beats rock");
+    if (computerChoice === "scissors")
+      console.log("You lost.... Rock loses with paper! Try next time");
+    if (computerChoice === "paper")
+      console.log("It's a draw! You both picked paper!");
   }
 
   if (playerChoice === "scissors") {
-    if (computerChoice === "paper") console.log("You win, congratz");
-    if (computerChoice === "rock") console.log("You lost, try next time!");
-    if (computerChoice === "scissors") console.log("It's a draw");
+    if (computerChoice === "paper")
+      console.log("You win! Scissors beats paper");
+    if (computerChoice === "rock")
+      console.log("You lost.... Scissors loses with rock! Try next time!");
+    if (computerChoice === "scissors")
+      console.log("It's a draw! You both picked scissors!");
   }
 }
 
