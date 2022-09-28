@@ -1,11 +1,16 @@
+// RANDOM NUMBER GENERATOR FROM 0 TO 2
 const randomNumber = () => Math.floor(Math.random() * 3);
+
+// OPTIONS ARRAY
 const options = ["rock", "paper", "scissors"];
 
+// FUNCTION - RETURNS COMPUTER CHOICE
 function getComputerChoice() {
   const index = randomNumber();
   return options[index];
 }
 
+//FUNCTION - PLAYER MAKE A CHOICE IN A PROMPT WINDOW, INFINITE LOOP IF INPUT IS MISSPELLED
 function getPlayerChoice() {
   let choice = prompt(
     "Choice your weapon. Rock? Paper? Scissors? Make a choice and win!"
@@ -18,6 +23,7 @@ function getPlayerChoice() {
   }
 }
 
+// FUNCTION - DECIDES WHO WIN ROUND (LOTS OF IF), RETURNS ARRAY WITH OVERALL SCORE
 function playRound() {
   const computerChoice = getComputerChoice();
   console.log(computerChoice);
@@ -68,6 +74,7 @@ function playRound() {
   return [playerScore, computerScore];
 }
 
+//FUNCTION - DECIDES WHO WIN IN A GAME
 function results(score) {
   if (score[0] > score[1]) console.log("You have won the match! GJ!");
   if (score[0] < score[1])
@@ -75,6 +82,7 @@ function results(score) {
   if ((score[0] = score[1])) console.log("It's a draw");
 }
 
+//LOOP - GAME HAS 5 ROUNDS
 for (let i = 1; i <= 5; i++) {
   console.log(i);
   playRound();
